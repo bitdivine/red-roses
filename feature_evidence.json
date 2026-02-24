@@ -1,0 +1,23 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-global-tailwind-css-theme-tokens-in-frontend-src-index-css-so-the-application-background-renders-as-bright-red-across-the-entire-app-in-both-the-default-light-theme-root-and-the-dark-theme-dark-by-adjusting-the-oklch-css-variable-values-for-background-and-any-dependent-surface-contrast-tokens-needed-to-keep-text-and-cards-readable-while-keeping-body-styled-via-apply-bg-background-text-foreground",
+      "featureTitle": "Update the global Tailwind/CSS theme tokens in `frontend/src/index.css` so the application background renders as bright_red across the entire app in both the default/light theme (`:root`) and the dark theme (`.dark`) by adjusting the OKLCH CSS variable values for `--background` and any dependent surface/contrast tokens needed to keep text and cards readable, while keeping `body` styled via `@apply bg-background text-foreground`.",
+      "files": [
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "build_request",
+  "title": "Change global app background theme to bright_red",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Update the global Tailwind/CSS theme tokens in `frontend/src/index.css` so the application background renders as bright_red across the entire app in both the default/light theme (`:root`) and the dark theme (`.dark`) by adjusting the OKLCH CSS variable values for `--background` and any dependent surface/contrast tokens needed to keep text and cards readable, while keeping `body` styled via `@apply bg-background text-foreground`.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "change the background colour to bright_red"
+        ]
+      },
+      "acceptanceCriteria": [
+        "In light mode, the page background (from `bg-background`) appears bright red rather than the current bright yellow.",
+        "In dark mode (when `.dark` class is applied), the page background (from `bg-background`) also appears bright red.",
+        "Foreground text and primary surfaces (e.g., cards/popovers) remain readable against the bright red background without requiring per-component overrides."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files under `frontend/src/components/ui` (compose these components instead).",
+    "Do not edit files listed as immutable by the platform (e.g., `frontend/src/main.tsx`, `frontend/src/hooks/useInternetIdentity.ts`, `frontend/src/hooks/useActor.ts`).",
+    "Keep styling driven by the existing CSS-variable token system (Tailwind colors mapped to `oklch(var(--...))`)."
+  ],
+  "nonGoals": [
+    "No backend changes.",
+    "No new pages, routes, or content changes to the Rose Scents page.",
+    "No redesign of typography or layout beyond what is required to preserve contrast/readability with the new background color."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.5rem;
+        /* Bright red background */
+        --background: 0.70 0.25 20;
+        /* Dark text for contrast on bright red */
+        --foreground: 0.10 0.00 0;
+        /* Light card on bright red */
+        --card: 0.98 0.02 20;
+        --card-foreground: 0.10 0.00 0;
+        /* Popover similar to card */
+        --popover: 0.98 0.02 20;
+        --popover-foreground: 0.10 0.00 0;
+        /* Dark primary for contrast */
+        --primary: 0.15 0.00 0;
+        --primary-foreground: 0.98 0.01 0;
+        /* Light secondary */
+        --secondary: 0.95 0.02 20;
+        --secondary-foreground: 0.15 0.00 0;
+        /* Muted light */
+        --muted: 0.85 0.05 20;
+        --muted-foreground: 0.25 0.00 0;
+        /* Accent dark */
+        --accent: 0.20 0.00 0;
+        --accent-foreground: 0.98 0.00 0;
+        /* Destructive darker red */
+        --destructive: 0.40 0.22 15;
+        --destructive-foreground: 0.98 0.01 15;
+        /* Visible borders */
+        --border: 0.60 0.08 20;
+        --input: 0.92 0.03 20;
+        /* Ring dark */
+        --ring: 0.15 0.00 0;
+        --chart-1: 0.20 0.00 0;
+        --chart-2: 0.25 0.00 0;
+        --chart-3: 0.30 0.00 0;
+        --chart-4: 0.35 0.00 0;
+        --chart-5: 0.40 0.00 0;
+    }
+
+    .dark {
+        /* Bright red background for dark mode */
+        --background: 0.65 0.25 20;
+        /* Dark text for contrast */
+        --foreground: 0.05 0.00 0;
+        /* Light card */
+        --card: 0.96 0.02 20;
+        --card-foreground: 0.05 0.00 0;
+        /* Popover */
+        --popover: 0.96 0.02 20;
+        --popover-foreground: 0.05 0.00 0;
+        /* Dark primary */
+        --primary: 0.10 0.00 0;
+        --primary-foreground: 0.98 0.01 0;
+        /* Secondary */
+        --secondary: 0.92 0.02 20;
+        --secondary-foreground: 0.10 0.00 0;
+        /* Muted */
+        --muted: 0.80 0.05 20;
+        --muted-foreground: 0.20 0.00 0;
+        /* Accent */
+        --accent: 0.15 0.00 0;
+        --accent-foreground: 0.98 0.00 0;
+        /* Destructive */
+        --destructive: 0.35 0.22 15;
+        --destructive-foreground: 0.98 0.01 15;
+        /* Borders */
+        --border: 0.55 0.08 20;
+        --input: 0.88 0.03 20;
+        /* Ring */
+        --ring: 0.10 0.00 0;
+        --chart-1: 0.15 0.00 0;
+        --chart-2: 0.20 0.00 0;
+        --chart-3: 0.25 0.00 0;
+        --chart-4: 0.30 0.00 0;
+        --chart-5: 0.35 0.00 0;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-serif;
+        letter-spacing: -0.02em;
+    }
+}
+

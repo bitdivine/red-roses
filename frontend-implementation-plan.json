@@ -1,0 +1,23 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Set global app background to bright_red via theme tokens",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Update global OKLCH CSS theme tokens so bg-background renders bright_red in both :root and .dark while preserving readable foreground and surface contrast.",
+      "acceptanceCriteria": [
+        "In light mode, the page background (from `bg-background`) appears bright red rather than the current bright yellow.",
+        "In dark mode (when `.dark` class is applied), the page background (from `bg-background`) also appears bright red.",
+        "Foreground text and primary surfaces (e.g., cards/popovers) remain readable against the bright red background without requiring per-component overrides."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Adjust the OKLCH CSS variables in :root and .dark to make --background a bright red, and tune dependent tokens (at minimum --foreground, --card/--card-foreground, --popover/--popover-foreground, plus any needed border/muted/secondary tokens) so text and surfaces remain readable on the new red background while keeping body styled via @apply bg-background text-foreground."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "frontend/src/App.tsx": "Main application component that renders the RoseScentsPage as the landing view.",
+  "frontend/src/pages/RoseScentsPage.tsx": "Editorial page showcasing eight distinct rose fragrance profiles (classic, damask, tea, myrrh, fruity, citrus, spicy, musky) and four factors explaining scent variation (variety, bloom stage, climate, time of day), with a responsive card-based layout and semantic structure, now with properly formatted string concatenation to avoid parsing errors.",
+  "frontend/index.css": "Global styles with a warm, sophisticated OKLCH color system featuring cream/burgundy tones for light mode and deep burgundy-black for dark mode, with serif headings for editorial feel.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with serif font family for headings and typography plugin settings to support long-form reading.",
+  "frontend/src/index.css": "Global styles with a bright red OKLCH color system for both light and dark modes, featuring bright red background (L=0.70/0.65, C=0.25, H=20) with dark text and light cards/popovers for high contrast and readability, maintaining serif headings for editorial feel."
+}
